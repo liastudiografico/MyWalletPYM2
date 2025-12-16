@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menú Principal</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+ <link href="https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght,XOPQ,XTRA,YOPQ,YTDE,YTFI,YTLC,YTUC@8..144,100..1000,96,468,79,-203,738,514,712&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="asset/css/estilo.css">
+</head>
+
+<body class="body_menu">
+    <header>
+        <nav class="navbar navbar-dark fixed-top">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#"><img src="asset/img/LOGO.png" alt=""></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar"
+                    aria-labelledby="offcanvasDarkNavbarLabel">
+                    <div class="offcanvas-header">
+                        <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">Menú</h5>
+                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
+                            aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body">
+                        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="2_menu.html">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="3_deposit.html">Deposito</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="4_sendmoney.html">Transferencia</a>
+                            </li>
+                            <a class="nav-link" href="5_transctions.html">Historial</a>
+                            </li>
+                            </li>
+                            <a class="nav-link" href="1_login.html">Cerrar Seción</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <section class="section_bienvenido ">
+        <h1 class="mt-4 text-center text-success"> BIENVENIDO </h1>
+        <p class="text-center ">" Lisbette Mansilla "</p>
+
+        <div class="cardsaldo mb-3 shadow-lg mx-auto " style="max-width: 80%;">
+            <div>
+                <label class="saldoActual_titulo">Saldo Actual</label>
+            </div>
+            <div>
+                <h3 id="saldoActual" class=" ">$Cargando...</h3>
+            </div>
+        </div>
+
+        <div class="iconos_flecha d-flex flex-column flex-sm-row">
+
+            <div class="down">
+                <i class="bi-box-arrow-down"></i>
+                <p class=" "> Deposito</p>
+            </div>
+
+
+            <div class="in-down ">
+                <i class="bi bi-box-arrow-in-down "></i>
+                <p class=" "> transacción</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="p-3 my-4">
+        <div class="d-flex flex-column flex-md-row justify-content-center align-items-stretch gap-3">
+
+            <a id="btnDepositar" href="3_deposit.html"
+                class="menu-card text-center shadow p-3 fs-5 text-decoration-none menu-item w-100 w-md-auto">
+                <i class="bi bi-wallet2 fs-3 mb-2 "></i>
+                Ingresos
+                <span class="card-hover-text">
+                    <strong>Añade fondos a tu billetera.</strong> <br> Utiliza esta opción para depositar dinero desde
+                    una cuenta bancaria
+                    externa, una tarjeta de débito/crédito, o mediante otros métodos disponibles. Es el punto de partida
+                    para cargar tu saldo y comenzar a operar.
+                </span>
+            </a>
+
+            <a id="btnEnviarDinero" href="4_sendmoney.html"
+                class="menu-card text-center shadow p-3 fs-5 text-decoration-none menu-item w-100 w-md-auto">
+                <i class="bi bi-send fs-3 mb-2"></i>
+                Enviar Dinero
+                <span class="card-hover-text">
+                    <strong>Transfiere dinero al instante.</strong> <br>Permite enviar fondos a otros usuarios de la
+                    plataforma o a cuentas
+                    bancarias externas. Simplemente ingresa el destinatario y el monto; la aplicación se encarga de la
+                    transacción de forma segura.
+                </span>
+            </a>
+
+            <a id="btnUltimosMovimientos" href="5_transctions.html"
+                class="menu-card text-center shadow p-3 fs-5 text-decoration-none menu-item w-100 w-md-auto">
+                <i class="bi bi-list-columns-reverse fs-3 mb-2 "></i>
+                Transacciones
+                <span class="card-hover-text">
+                    <strong>Consulta tu historial financiero.</strong> <br>Accede a un registro detallado de todos tus
+                    movimientos:
+                    depósitos, envíos de dinero, pagos y retiros. Esto te permite llevar un control preciso de tu
+                    presupuesto y revisar cualquier actividad reciente </span>
+            </a>
+
+        </div>
+    </section>
+
+<footer class="text-center p-3 shadow-lg mt-5">
+    <div class="d-flex justify-content-between align-items-center mb-2 container">
+        
+        <div class="p-2">
+            <a href="1_login.html">
+                <img src="asset/img/LOGO.png" alt="Logo de la Aplicación" style="height: 50px;">
+            </a>
+        </div>
+        
+        <div class="btn_cerrarsecion p-2">
+            <a href="1_login.html" class="btn">
+                <i class="bi bi-box-arrow-right"></i> Cerrar Sesión
+            </a>
+        </div>
+    </div>
+
+    <p class="small mb-0">
+        <a href="#" class="text-muted me-3">Política de Privacidad</a>
+        <a href="#" class="text-muted text-decoration-none me-3">Términos y Condiciones</a>
+        <br>
+        <span class="ms-3">&copy; 2025 [Lisbette Mansilla]. Todos los derechos reservados.</span>
+    </p> 
+</footer>
+
+    <div id="toastMessage" class="toast-message"></div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script src="funcionalidad.js"></script>
+</body>
+
+</html>

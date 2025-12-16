@@ -1,0 +1,566 @@
+:root {
+    --varprincipal: #1a774c;
+    --varprincipaloscura: #10492e;
+    --varsecundaria: #5dbb8f;
+    --varcontraste: #23252b;
+    --varsecundariaclara: #b2b1b8;
+    --varfondo: #dcfff9;
+    --varfondogris: #eff3f1;
+}
+
+body {
+    background-color: var(--varcontraste);
+    /* Fondo gris claro */
+    color: #333;
+    font-family: 'roboto', sans-serif;
+    padding-top: 75px;
+}
+
+.contenedor_img {
+    height: 100px;
+    max-width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 50px;
+}
+
+.Login h2 {
+    color: var(--varsecundariaclara);
+    text-align: center;
+    margin-bottom: 30px;
+    font-weight: 300;
+    font-size: 40px;
+
+}
+
+.Login {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: var(--varsecundariaclara);
+    max-width: 80%;
+    margin-top: 20px;
+    font-weight: 100;
+    font-size: 15px;
+}
+
+input {
+    font-weight: 100;
+    font-size: xx-small;
+}
+
+.form-control {
+    border-radius: 16px;
+    padding: 10px 15px;
+    height: auto;
+    /* Ajuste para mejor espaciado */
+}
+
+
+.form-control:focus {
+    border-color: var(--varsecundariaclara);
+    /* Borde azul al enfocar */
+    box-shadow: 0 0 0 0.2rem rgba(253, 255, 253, 0.25);
+    /* Sombra de enfoque azul semi-transparente */
+}
+
+/* Estilos del botón de inicio de sesión */
+.btn-primary {
+    background-color: var(--varcontraste);
+    border-color: var(--varsecundariaclara);
+    color: var(--varsecundariaclara);
+    font-weight: 300;
+    padding: 10px 15px;
+    border-radius: 24px;
+    width: 100%;
+    /* Botón de ancho completo */
+    margin-top: 15px;
+    transition: background-color 0.3s ease;
+}
+
+
+.btn-primary:hover,
+.btn-primary:focus {
+    background-color: var(--varprincipaloscura);
+    /* Rojo más oscuro al pasar el ratón */
+    border-color: var(--varprincipaloscura);
+    box-shadow: none;
+}
+
+.modal-backdrop {
+    background-color: rgba(13, 60, 32, 0.7);
+}
+
+#loginModal .modal-content {
+    box-sizing: content-box;
+    background-color: var(--varcontraste);
+    border-radius: 16px;
+    box-shadow: 0 10px 25px rgba(6, 85, 36, 0.3);
+    color: var(--varprincipaloscura);
+}
+
+.modal-content{
+background-color: var(--varprincipal);
+color: var(--varfondo);
+font-weight: 200;
+font-size: small;
+}
+
+/* 3. Modificar el título */
+#loginModal .modal-header {
+    background-color: var(--varprincipal);
+    /* Color de fondo claro para la cabecera */
+    color: var(--varfondo);
+}
+
+/* Estilo Personalizado para el Mensaje de Éxito */
+.alert-success {
+    background-color: var(--varprincipal);
+    /* Texto: Color de texto oscuro para mejor contraste */
+    color: var(--varfondo);
+    padding: 15px 20px;
+    font-weight: 300;
+    /* Texto seminegrilla */
+    border: none;
+}
+
+/* Estilo Personalizado para el Mensaje de Error */
+.alert-danger {
+    background-color: var(--varprincipal);
+    color: var(--varfondo);
+    padding: 15px 20px;
+    font-weight: 300;
+    border: none;
+
+}
+
+/* menu principal */
+
+.body_menu {
+    background-color: var(--varfondogris);
+}
+
+.navbar {
+    background-color: var(--varcontraste);
+    box-shadow: 0 1px 30px rgba(70, 66, 85, 0.6);
+    
+}
+
+.navbar-brand {
+    height: 60px;
+    max-width: 100%;
+    display: flex;
+    flex-direction: row;
+    background-color: var(--varcontraste);
+
+}
+
+.section_bienvenido {
+    padding: 10px;
+    background-color: var(--varcontraste);
+
+}
+
+.section_bienvenido h1 {
+    font-weight: 700;
+    color: var(--varsecundariaclara);
+}
+
+.section_bienvenido p {
+    font-weight: 300;
+    font-size: 25px;
+    color: var(--varsecundariaclara);
+}
+
+.cardsaldo {
+    margin: 60px;
+    border-radius: 24px;
+    background-color: var(--varfondo);
+    color: var(--varcontraste);
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.saldoActual_titulo {
+    font-weight: 700;
+    font-size: 30px;
+
+}
+
+.iconos_flecha {
+    margin-top: 35px;
+    display: flex;
+    font-weight: 100;
+    font-size: 15px;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    padding: 20px;
+    border-radius: 50px;
+    box-flex-group: var(--varsecundaria);
+}
+
+.down {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid var(--varsecundariaclara);
+    background-color: transparent;
+    border-radius: 24px;
+    padding: 10px;
+    padding: 0 30px;
+    padding-top: 10px;
+
+
+}
+
+.down i {
+    color: var(--varsecundariaclara);
+    font-size: 30px;
+
+}
+
+.down p {
+    color: var(--varsecundariaclara);
+    font-weight: 200;
+    font-size: 15px;
+    margin-top: 10px;
+}
+
+.in-down {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid var(--varsecundariaclara);
+    background-color: transparent;
+    border-radius: 24px;
+    padding: 10px;
+    padding: 0 20px;
+    padding-top: 10px;
+}
+
+.in-down i {
+    color: var(--varsecundariaclara);
+    font-size: 30px;
+
+}
+
+.in-down p {
+    color: var(--varsecundariaclara);
+    font-weight: 200;
+    font-size: 15px;
+    margin-top: 10px;
+}
+
+/* Estilo base para las tarjetas del menú */
+.menu-item {
+    border: 1px solid none;
+    background-color: var(--varprincipal);
+    transition: all 0.2s ease-in-out;
+    border-radius: 16px;
+    min-height: 150px;
+    color: var(--varfondogris);
+    box-shadow: 0 6px 1px rgba(0, 123, 255, 2);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-weight: 100;
+
+}
+
+.menu-item:hover {
+    background-color: none;
+    color: var(--varcontraste) !important;
+    font-weight: 500;
+    border: 1px solid var(--varsecundaria);
+    transform: translateY(-3px);
+    box-shadow: 0 2px 1px rgba(2, 3, 4, 1);
+    /* Sombra azulada sutil */
+}
+
+/* Asegurar que el icono también cambie de color */
+.menu-item:hover i {
+    color: var(--varcontraste) !important;
+}
+
+.card-hover-text {
+    display: none;
+    /* Estilos opcionales para el texto */
+    font-size: 0.7rem;
+    font-weight: 200;
+    margin-top: 10px;
+    padding-top: 10px;
+    border-top: 1px solid rgba(92, 180, 137, 0.3);
+    /* Línea divisoria */
+    color: var(--varfondo);
+}
+
+/* 💥 REGLA PARA MOSTRAR EL TEXTO EN HOVER 💥 */
+.menu-card:hover .card-hover-text {
+    /* Mostramos el texto cuando el ratón está sobre la tarjeta */
+    display: block;
+}
+
+footer {
+    background-color: var(--varcontraste);
+    color: var(--varsecundariaclara);
+    font-size: 10px;
+    
+
+}
+
+.btn_cerrarsecion {
+    background-color: var(--varcontraste);
+    border: 1px solid var(--varsecundariaclara);
+    /* Usamos 'border' en lugar de 'border-color' para aplicar el borde */
+    color: var(--varsecundariaclara);
+    font-weight: 300;
+    padding: 10px 15px;
+    border-radius: 24px;
+    /* --- CAMBIO CLAVE: Comentamos o eliminamos estas líneas --- */
+    /* width: 100%; */
+    /* margin-top: 15px; */
+    transition: background-color 0.3s ease;
+}
+
+/* El estilo original del botón dentro del div */
+.btn_cerrarsecion a.btn {
+    /* Quitamos el estilo por defecto de 'a.btn' que podría interferir */
+    padding: 0;
+    /* Ya le dimos padding al div padre */
+    color: inherit;
+    text-decoration: none;
+}
+
+.btn_cerrarsecion:hover,
+.btn_cerrarsecion:focus {
+    background-color: var(--varprincipaloscura);
+    border-color: var(--varprincipaloscura);
+    box-shadow: none;
+}
+
+
+/* 
+   2.1. ESTILOS DE TOAST/VENTANA FLOTANTE (Menú)  */
+
+.toast-message {
+    /* Posicionamiento y diseño */
+    position: fixed;
+    bottom: 20px;
+    /* Separación del fondo */
+    left: 50%;
+    transform: translateX(-50%);
+    /* Centrar horizontalmente */
+
+    /* Apariencia */
+    background-color: var(--varcontraste);
+    /* Verde de éxito */
+    color: var(--varfondo);
+    padding: 16px 25px;
+    border-radius: 16px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    z-index: 9999;
+    /* Asegura que esté por encima de todo */
+
+    /* Transición y Visibilidad */
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s, visibility 0.3s, bottom 0.3s;
+    font-size: 1.1rem;
+    font-weight: 300;
+}
+
+/* Clase para mostrar el toast */
+.toast-message.show {
+    opacity: 1;
+    visibility: visible;
+    bottom: 40px;
+    /* Pequeño movimiento hacia arriba al aparecer */
+}
+
+.mensajeDeposito{
+    background-color: var(--varcontraste);
+color: var(--varfondo);
+font-weight: 500;
+font-size: larger;
+}
+
+/*    3. ESTILOS DE DEPÓSITO (3_deposit.html)  */
+
+.section_bienvenido_ingreso {
+    padding: 10px;
+    background-color: var(--varcontraste);
+    padding-bottom: 40px;
+}
+
+.section_bienvenido_ingreso h1 {
+    font-weight: 700;
+   
+}
+
+.section_bienvenido_ingreso p {
+    padding: 20 100px;
+    padding-bottom: 20px;
+    margin-top: 30px;
+    font-weight: 200;
+    font-size: 15px;
+    color: var(--varsecundariaclara);
+    text-align: center;
+}
+
+.card_ingreso {
+    margin: 0px;
+    border-radius: 24px;
+    background-color: var(--varprincipal);
+    color: var(--varfondogris);
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.btndepsit {
+    background-color: var(--varprincipal);
+    border-color: var(--varfondoa);
+}
+
+.btndepsit:hover {
+    background-color: var(--varcontraste);
+    border-color: var(--varcontraste);
+}
+
+.card_ingreso_form {
+    background-color: var(--varprincipal);
+    border-radius: 16px;
+    box-shadow: 0 6px 1px rgba(0, 0, 0, 0.1);
+    color: var(--varfondogris);
+    max-width: 450px;
+    font-weight: 100;
+    padding: 50px;
+    color: var(--varfondo);
+}
+
+
+
+/* 4. ESTILOS DE TRANSFERENCIA (4_destinatarios.html)*/
+
+.container_sendmoney {
+    padding: 10px;
+    background-color: var(--varcontraste);
+    padding-bottom: 40px;
+}
+
+.section_transf {
+    color: var(--varsecundariaclara);
+    font-size: 15px;
+    font-weight: 200;
+}
+
+.listadodedestinatarios h3 {
+    font-weight: 800;
+    margin-bottom: 50px;
+}
+
+.contacto_buscar {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.card_sendmoney_2 {
+    color: var(--varfondo);
+    text-align: center;
+}
+
+.form-group {
+    text-align: left;
+    font-weight: 200;
+}
+
+/* 1. ESTILO DE TABLA BÁSICA (sin colores ni marcaciones de borde) */
+.container_sendmoney table.table {
+    border: none;
+    margin-bottom: 0;
+    background-color: var(--varcontraste);
+    font-weight: 200;
+    font-size: medium;
+    color: var(--varfondogris);
+}
+
+.container_sendmoney table.table th {
+    border-top: none;
+    border-bottom: 1px solid #0f462a;
+    /* Dejar un separador horizontal sutil */
+    padding: 10px;
+    background-color: transparent !important;
+    color: var(--varprincipal);
+    font-size: medium;
+}
+
+.container_sendmoney table.table td {
+    border-top: none;
+    border-bottom: 1px solid #89c8a9;
+    /* Dejar un separador horizontal sutil */
+    padding: 10px;
+    background-color: transparent !important;
+    color: var(--varfondogris);
+    font-size: small;
+}
+
+.container_sendmoney table.table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+/* 2. CLASE PARA RESALTAR LA FILA SELECCIONADA */
+.contacto-seleccionado {
+    background-color: var(--varcontraste);
+    /* Azul muy claro para resaltar */
+    font-weight: bold;
+    border-left: 5px solid var(--varcontraste);
+    /* Borde izquierdo azul primario para marcar */
+    transition: background-color 0.3s;
+}
+
+/* Ocultar flechas de los inputs number */
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* 5. ESTILOS DE TRANSACCIONES (5_transactions.html)    */
+.container_transctions {
+    background-color: var(--varcontraste);
+color: var(--varsecundariaclara);
+}
+
+.bienvenida_transaccion{
+    padding: 10px;
+    padding-bottom: 10px;
+}
+
+.texto_tr {
+    font-weight: 100;
+}
+.filtroTipo {
+    font-size: small;
+}
+
+.text-danger {
+    color: var(--varprincipaloscura) !important;
+    font-weight: 500;
+    font-size: medium;
+}
+

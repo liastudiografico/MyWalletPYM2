@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transferencia de Dinero</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+
+    <link rel="stylesheet" href="asset/css/estilo.css">
+</head>
+
+<body class="body_menu">
+    <header>
+        <nav class="navbar navbar-dark fixed-top">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#"><img src="asset/img/LOGO.png" alt=""></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar"
+                    aria-labelledby="offcanvasDarkNavbarLabel">
+                    <div class="offcanvas-header">
+                        <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">Menú</h5>
+                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
+                            aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body">
+                        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="2_menu.html">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="3_deposit.html">Deposito</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="4_sendmoney.html">Transferencia</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="5_transctions.html">Historial</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="1_login.html">Cerrar Seción</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+
+    <div class="container_sendmoney py-1">
+
+        <section class="container section_transf  w-100 py-3">
+            <h1 class="text-center mb-5 text-success">Transferencia de Dinero</h1>
+            <p><strong>Transferencia de Dinero: </strong><br> Envía en Segundos
+                Bienvenido a tu sección de transferencias. Enviar dinero a tus contactos o cuentas bancarias es
+                instantáneo y sin costo a través de nuestra plataforma.
+                <br>
+                Hemos simplificado el proceso para tus transferencias habituales.
+            <ul>
+                <li>
+                    Guarda y Reutiliza: Agrega y administra fácilmente los datos (Nombre, Banco, Nro. Cuenta, Alias/CBU)
+                    de las personas a las que envías dinero con regularidad.
+                </li>
+                <li>
+                    Búsqueda Rápida: Utiliza el campo de búsqueda para encontrar cualquier destinatario por su nombre o
+                    alias en un instante.
+                </li>
+                <li>
+                    Gestión Total: Usa el botón "+ Agregar Nuevo Contacto" para vincular nuevas cuentas bancarias o
+                    CVU/Alias de otras wallets a tu lista.
+                </li>
+
+                </p>
+            </ul>
+        </section>
+
+        <section class="p-4 mb-5 ">
+            <header class="listadodedestinatarios text-center text-success mb-4">
+                <h3> Destinatarios Frecuentes</h3>
+            </header>
+
+            <div class="container  contacto_buscar  ">
+                <div class="d-flex justify-content-between align-items-center mb-3 ">
+
+                    <button type="button" class="btn btn-success py-3 shadow" data-bs-toggle="modal"
+                        data-bs-target="#agregarContactoModal">
+                        + Agregar Nuevo Contacto
+                    </button>
+                </div>
+
+                <div class="form-group mb-1  ">
+                    <input type="text" class="form-control py-3" id="inputBuscarContacto"
+                        placeholder="Buscar por Nombre o Alias...">
+                </div>
+            </div>
+
+            <div class="table-responsive container ">
+                <table class="table table-hover ">
+                    <thead class="text-success">
+                        <tr>
+                            <th>Nombre/Apellido</th>
+                            <th>Banco</th>
+                            <th>Nro Cuenta</th>
+                            <th>Alias</th>
+                            <th>Acción</th>
+                        </tr>
+                    </thead>
+                    <tbody id="contactosTablaBody">
+                        <tr>
+                            <td colspan="5" class="text-center text-muted">Cargando destinatarios...</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </div>
+
+
+    <div class="container container_sendmoney_2 py-5">
+        <section class="card card_sendmoney_2 shadow p-4 mt-2 bg-success">
+            <h3 class="mb-4">Realizar Transferencia</h3>
+
+            <form id="formEnvioDinero">
+
+                <div class="form-group mb-3">
+                    <label for="monto">Monto a Enviar</label>
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text">$</span>
+                        </div>
+                        <input type="number" class="form-control " id="monto" min="1" step="0.01"
+                            placeholder="Ej: 1000" required>
+                    </div>
+                </div>
+
+                <div class="form-group mb-4">
+                    <label for="contactoDestino">Seleccionar Destinatario</label>
+                    <select class="form-control" id="contactoDestino" required>
+                        <option value="" disabled selected>Seleccione un contacto...</option>
+                    </select>
+                </div>
+
+                <div id="mensajeExitoEnvio" class="alert mt-3 d-none" role="alert">
+                    Su Transferencia ha sido exitosa.
+                </div>
+
+                <button type="submit" class="btn btndepsit btn-primary w-100 mb-3 btn-ls" id="btnEnviarDineroSubmit">
+                    Enviar Dinero
+                </button>
+            </form>
+        </section>
+    </div>
+
+
+    <div class="modal fade" id="agregarContactoModal" tabindex="-1" aria-labelledby="modalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalLabel">Agregar Nuevo Destinatario</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="formAgregarContacto">
+                        <div class="form-group mb-3">
+                            <label for="nombre">Nombre y Apellido</label>
+                            <input type="text" class="form-control" id="nombre" required>
+                        </div>
+                        <div class="form-group mb-3">
+                            <label for="banco">Banco</label>
+                            <input type="text" class="form-control" id="banco" required>
+                        </div>
+                        <div class="form-group mb-3">
+                            <label for="cbu">CBU / CVU (6 Dígitos para prueba)</label>
+                            <input type="text" class="form-control" id="cbu" maxlength="22" required>
+                        </div>
+                        <div class="form-group mb-4">
+                            <label for="alias">Alias</label>
+                            <input type="text" class="form-control" id="alias" required>
+                        </div>
+                        <button type="submit" class="btn btn-success btn-block w-100">Agregar Contacto</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <footer class="text-center p-3 shadow-lg mt-5">
+        <div class="d-flex justify-content-between align-items-center mb-2 container">
+
+            <div class="p-2">
+                <a href="1_login.html">
+                    <img src="asset/img/LOGO.png" alt="Logo de la Aplicación" style="height: 50px;">
+                </a>
+            </div>
+
+            <div class="btn_cerrarsecion p-2">
+                <a href="2_menu.html" class="btn">
+                    <i class="bi bi-box-arrow-right"></i> Volver al Menú principal
+                </a>
+            </div>
+        </div>
+
+        <p class="small mb-0">
+            <a href="#" class="text-muted me-3">Política de Privacidad</a>
+            <a href="#" class="text-muted text-decoration-none me-3">Términos y Condiciones</a>
+            <br>
+            <span class="ms-3">&copy; 2025 [Lisbette Mansilla]. Todos los derechos reservados.</span>
+        </p>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script src="funcionalidad.js"></script>
+
+
+</body>
+
+</html>
